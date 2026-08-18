@@ -44,17 +44,19 @@ simplify (Pow f g)
   where
     fs = simplify f
     gs = simplify g
-simplify (Ln (Lit 1)) = (Lit 0)
+simplify (Ln (Lit 1)) = Lit 0
 simplify (Ln f)
   | fs == f   = Ln fs
   | otherwise = simplify (Ln fs)
   where fs = simplify f
-simplify (Sin (Lit x)) = (Lit 0)
+simplify (Sin (Lit 0)) = Lit 0
+simplify (Sin Pi) = Lit 0
 simplify (Sin f)
   | fs == f   = Sin fs
   | otherwise = simplify (Sin fs)
   where fs = simplify f
-simplify (Cos (Lit 0)) = (Lit 1)
+simplify (Cos (Lit 0)) = Lit 1
+simplify (Cos Pi) = Lit (-1)
 simplify (Cos f)
   | fs == f   = Cos fs
   | otherwise = simplify (Cos fs)
