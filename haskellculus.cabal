@@ -4,7 +4,7 @@ cabal-version:       >=1.10
 -- http://haskell.org/cabal/users-guide/
 
 name:                haskellculus
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Symbolic differentiation for math expressions
 description:         Provides an MExp type to store mathematical expressions, in additon to differentiate :: MExp -> String -> MExp and simplify :: MExp -> MExp functions. You can differentiate with respect to any variable.
 bug-reports:         https://github.com/MythicalFlame/Haskellculus/issues

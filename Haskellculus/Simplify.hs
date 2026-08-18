@@ -34,9 +34,9 @@ simplify (Div f g)
   where
     fs = simplify f
     gs = simplify g
+simplify (Pow _ (Lit 0)) = Lit 1
 simplify (Pow (Lit 0) _) = Lit 0
 simplify (Pow (Lit 1) _) = Lit 1
-simplify (Pow _ (Lit 0)) = Lit 1
 simplify (Pow f (Lit 1)) = f
 simplify (Pow f g)
   | fs == f && gs == g = Pow fs gs
