@@ -10,4 +10,4 @@ main = do
   putStrLn "Enter the variable to differentiate with respect to:"
   var <- getLine
   let expr = read input :: MExp
-  print (simplify (differentiate expr var))
+  print (simplify (differentiate (simplify expr) var))
