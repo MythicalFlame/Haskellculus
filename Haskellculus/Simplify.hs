@@ -1,4 +1,4 @@
-module Haskellculus.Simplify ( simplify ) where
+module Haskellculus.Simplify (simplify) where
 import Haskellculus.MExp
 
 simplify :: MExp -> MExp

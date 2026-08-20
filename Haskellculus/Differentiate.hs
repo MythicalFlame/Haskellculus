@@ -1,4 +1,4 @@
-module Haskellculus.Differentiate ( differentiate ) where
+module Haskellculus.Differentiate (differentiate) where
 import Haskellculus.MExp
 
 differentiate :: MExp -> String -> MExp

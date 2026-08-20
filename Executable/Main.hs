@@ -2,6 +2,7 @@ module Main where
 import Haskellculus.MExp
 import Haskellculus.Differentiate
 import Haskellculus.Simplify
+import Haskellculus.Latexify
 
 main :: IO ()
 main = do
