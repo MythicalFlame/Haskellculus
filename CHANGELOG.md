@@ -1,5 +1,9 @@
 # Revision history for haskellculus
 
+## 0.3.0.0 -- 2026-08-20
+
+* Added E, which I somehow forgot
+
 ## 0.2.0.0 -- 2026-08-19
 
 * Added latexify function, which turns an MExp into a String in LaTeX format

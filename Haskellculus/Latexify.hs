@@ -13,6 +13,7 @@ latexifyPrecedence (Lit x) p
   | numerator x < 0                        = checkParens (p > 2) $ "-\\frac{" ++ show (abs (numerator x)) ++ "}{" ++ show (denominator x) ++ "}"
   | otherwise                              = "\\frac{" ++ show (numerator x) ++ "}{" ++ show (denominator x) ++ "}"
 latexifyPrecedence Pi _ = "\\pi"
+latexifyPrecedence E _ = "e"
 latexifyPrecedence (Var x) _ = x
 latexifyPrecedence (Add f g) p = checkParens (p > 1) $ latexifyPrecedence f 1 ++ " + " ++ latexifyPrecedence g 1
 latexifyPrecedence (Mul f g) p = checkParens (p > 2) $ latexifyPrecedence f 2 ++ " \\cdot " ++ latexifyPrecedence g 2

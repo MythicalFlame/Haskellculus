@@ -4,6 +4,7 @@ import Haskellculus.MExp
 simplify :: MExp -> MExp
 simplify x@(Lit _) = x
 simplify Pi = Pi
+simplify E = E
 simplify x@(Var _) = x
 simplify (Add (Lit 0) f) = f
 simplify (Add f (Lit 0)) = f
@@ -45,6 +46,7 @@ simplify (Pow f g)
     fs = simplify f
     gs = simplify g
 simplify (Ln (Lit 1)) = Lit 0
+simplify (Ln E) = Lit 1
 simplify (Ln f)
   | fs == f   = Ln fs
   | otherwise = simplify (Ln fs)

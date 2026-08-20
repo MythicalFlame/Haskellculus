@@ -4,6 +4,7 @@ import Haskellculus.MExp
 differentiate :: MExp -> String -> MExp
 differentiate (Lit _) _ = Lit 0
 differentiate Pi _ = Lit 0
+differentiate E _ = Lit 0
 differentiate (Var v) x
   | v == x    = Lit 1
   | otherwise = Lit 0
